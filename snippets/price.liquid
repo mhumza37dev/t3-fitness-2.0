@@ -40,6 +40,24 @@
   endif
 -%}
 
+<style>
+  .price-text{
+    font-weight: 600; 
+    font-size: 28px; 
+    line-height: 150%; 
+    letter-spacing: 0%; 
+    color: rgba(240, 70, 70, 1); 
+    font-family: Syncopate, sans-serif; 
+  }
+
+  @media screen and (max-width: 768px) {
+  .price-text{
+    font-size: 20px; 
+  }
+}
+</style>
+
+
 {%- unless target == null and placeholder == null -%}
   <div
     class="
@@ -85,7 +103,7 @@
           </span>
         {%- else -%}
           <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
-          <span class="price-item price-item--regular">
+          <span class="price-item price-item--regular price-text">
             {{ money_price }}
           </span>
         {%- endif -%}
