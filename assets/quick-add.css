@@ -311,7 +311,7 @@ quick-add-modal .product__column-sticky {
   quick-add-modal .product:not(.product--no-media) .product__media-wrapper {
     max-width: 45%;
     width: calc(45% - var(--grid-desktop-horizontal-spacing) / 2);
-  }
+}
 
   quick-add-modal .product:not(.product--no-media) .product__info-wrapper {
     padding-top: 2rem;
