@@ -1343,7 +1343,7 @@ button.shopify-payment-button__button--unbranded {
 .customer button.disabled,
 .quantity__button.disabled {
   cursor: not-allowed;
-  opacity: 0.5;
+  opacity: 1;
 }
 
 .button--full-width {
@@ -1944,8 +1944,10 @@ input[type='checkbox'] {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgb(var(--color-foreground));
   padding: 0;
+  border-radius: 50px;
+  background: #f3f3f3;
+  color: #000;
 }
 
 .quantity__button:first-child {
@@ -1976,7 +1978,7 @@ input[type='checkbox'] {
 .quantity__button:not(:focus-visible):not(.focused),
 .quantity__input:not(:focus-visible):not(.focused) {
   box-shadow: inherit;
-  background-color: inherit;
+  /* background-color: inherit; */
 }
 
 .quantity__input:-webkit-autofill,
@@ -3608,5 +3610,21 @@ a#start-chat-link {
 @media screen and (max-width: 749px) {
   #more-payment-options-link {
     display: none;
+  }
+}
+
+quantity-input.quantity {
+  background: #fff;
+  border-radius: 40px;
+  padding: 2px 4px;
+  border: 0px transparent;
+  min-height: calc((var(--inputs-border-width)* 2) + 4.8rem);
+  width: 168px;
+  color:black
+}
+
+@media screen and (max-width: 768px) {
+  quantity-input.quantity {
+      width: 100%;
   }
 }
