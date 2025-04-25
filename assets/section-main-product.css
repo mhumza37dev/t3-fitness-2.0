@@ -1260,8 +1260,15 @@ a.product__text {
 }
 
 .icon-with-text--horizontal .h4 {
-  padding-top: calc(var(--icon-size) + var(--icon-spacing));
-  text-align: center;
+  /* padding-top: calc(var(--icon-size) + var(--icon-spacing));
+  text-align: center; */
+  padding-top: 1.25rem;
+    text-align: center;
+    font-family: Urbanist;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 130%;
+    letter-spacing: 1%;
 }
 
 .icon-with-text--horizontal .svg-wrapper + .h4,
