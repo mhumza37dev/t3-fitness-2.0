@@ -71,157 +71,160 @@
    cursor: pointer;
    }
    .thumbnail-item.active {
-   border:  0.75px solid rgba(188, 34, 39, 1);
-   }
-   .thumbnail-image {
-   width: 100%;
-   height: 100px;
-   object-fit: contain;
-   background: #fff;
-   }
-   .main-image-container {
-   flex: 1;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   width: 468px;
-   height: 584px;
-   position: relative;
-   padding-top: 0px;
-   padding-bottom: 0px;
-   padding-right: 0px;
-   padding-left: 0px;
-   border: 0px;
-   background: none;
-   cursor: pointer;
-   }
-   .main-product-image {
-   height: 100%;
-   width: 100%;
-   object-fit: contain;
-   background-color: #fff;
-   }
-   /* Magnify button styles */
-   .magnify-button {
-   position: absolute;
-   bottom: 15px;
-   right: 15px;
-   background-color: rgba(255, 255, 255, 0.8);
-   border-radius: 50%;
-   width: 40px;
-   height: 40px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   cursor: pointer;
-   border: none;
-   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-   z-index: 2;
-   transition: all 0.2s ease;
-   }
-   .magnify-button:hover {
-   background-color: rgba(255, 255, 255, 1);
-   transform: scale(1.05);
-   }
-   /* Modal styles */
-   .image-modal {
-   display: none;
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   background-color: rgba(0, 0, 0, 0.9);
-   z-index: 1000;
-   align-items: center;
-   justify-content: center;
-   }
-   .modal-content {
-   position: relative;
-   max-width: 95%;
-   max-height: 95%;
-   margin: auto;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   }
-   .modal-image {
-   max-width: 100%;
-   max-height: 90vh;
-   object-fit: contain;
-   }
-   .close-modal {
-   position: absolute;
-   top: 20px;
-   right: 30px;
-   color: #fff;
-   font-size: 30px;
-   font-weight: bold;
-   cursor: pointer;
-   z-index: 1001;
-   }
-   .nav-button {
-   position: absolute;
-   top: 50%;
-   transform: translateY(-50%);
-   background-color: rgba(255, 255, 255, 0.5);
-   border: none;
-   color: #000;
-   width: 50px;
-   height: 50px;
-   border-radius: 50%;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   cursor: pointer;
-   transition: all 0.2s ease;
-   z-index: 1001;
-   }
-   .nav-button:hover {
-   background-color: rgba(255, 255, 255, 0.8);
-   }
-   .prev-button {
-   left: 30px;
-   }
-   .next-button {
-   right: 30px;
-   }
-   .image-counter {
-   position: absolute;
-   top: 20px;
-   left: -50%;
-   right: -50%;
-   color: #fff;
-   font-size: 16px;
-   z-index: 1001;
-   padding: 5px 10px;
-   border-radius: 4px;
-   width: 70px;
-   align-items: center;
-   justify-content: center;
-   display: flex;
-   margin: 0 auto;
-   }
-   /* Mobile styles */
-   @media screen and (max-width: 1024px) {
-   .gallery-container {
-   flex-direction: column-reverse;
-   }
-   .thumbnails-column {
-   flex-direction: row;
-   width: 100%;
-   margin-right: 0;
-   margin-top: 15px;
-   overflow-x: auto;
-   height: unset;
-   gap:10px;
-   margin-bottom: 1.5rem;
-   }
-   .thumbnail-item {
-   width: 80px;
-   height: 80px;
-   margin-bottom: 0;
-   }
+     border:  0.75px solid rgba(188, 34, 39, 1);
+    }
+    .thumbnail-image {
+      width: 100%;
+      height: 100px;
+      object-fit: contain;
+      background: #fff;
+    }
+    .main-image-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 468px;
+      height: 584px;
+      position: relative;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      padding-right: 0px;
+      padding-left: 0px;
+      border: 0px;
+      background: none;
+      cursor: pointer;
+    }
+    .main-product-image {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      background-color: #fff;
+    }
+    /* Magnify button styles */
+    .magnify-button {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border: none;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      z-index: 2;
+      transition: all 0.2s ease;
+    }
+    .magnify-button:hover {
+      background-color: rgba(255, 255, 255, 1);
+      transform: scale(1.05);
+    }
+    /* Modal styles */
+    .image-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-content {
+      position: relative;
+      max-width: 95%;
+      max-height: 95%;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-image {
+      max-width: 100%;
+      max-height: 90vh;
+      object-fit: contain;
+    }
+    .close-modal {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: #fff;
+      font-size: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 1001;
+    }
+    .nav-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(255, 255, 255, 0.5);
+      border: none;
+      color: #000;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      z-index: 1001;
+    }
+    .nav-button:hover {
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+    .prev-button {
+      left: 30px;
+    }
+    .next-button {
+      right: 30px;
+    }
+    .image-counter {
+      position: absolute;
+      top: 20px;
+      left: -50%;
+      right: -50%;
+      color: #fff;
+      font-size: 16px;
+      z-index: 1001;
+      padding: 5px 10px;
+      border-radius: 4px;
+      width: 70px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      margin: 0 auto;
+    }
+    /* Mobile styles */
+    @media screen and (max-width: 1024px) {
+      .gallery-container {
+        flex-direction: column-reverse;
+      }
+      .thumbnails-column {
+        flex-direction: row;
+        width: 100%;
+        margin-right: 0;
+        margin-top: 15px;
+        overflow-x: auto;
+        height: unset;
+        gap:10px;
+        margin-bottom: 1.5rem;
+      }
+      .thumbnail-item {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 0;
+      }
+      .thumbnail-item.active {
+        padding: 42px;
+      }
    .thumbnail-image {
    width: 80px;
    height: 80px;

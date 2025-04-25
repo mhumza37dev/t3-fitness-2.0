@@ -116,6 +116,16 @@
                     </h2>
                   </a>
                 </div>
+
+                <div class="row size-row">
+                    <label class="size-row-label">Size</label>
+                    <label class="size-row-value"><strong>Adjustable</strong></label>
+                  </div>
+                  <div class="row rating-row">
+                    <label class="rating-row-label" >★★★★★</label>
+                    <label class="rating-row-value">(200)</label>
+                  </div>
+
               {%- when 'price' -%}
                 <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                   {%- render 'price',
@@ -202,12 +212,12 @@
                     {%- endif -%}
                   {%- endif -%}
                 </p>
-              {%- when 'description' -%}
+              {% comment %} {%- when 'description' -%}
                 {%- if product.description != blank -%}
                   <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
                     {{ product.description }}
                   </div>
-                {%- endif -%}
+                {%- endif -%} {% endcomment %}
               {%- when 'sku' -%}
                 <p
                   class="product__sku{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"
@@ -449,11 +459,11 @@
                     {{ block.settings.text | default: block.settings.page.title | escape }}
                   </button>
                 </modal-opener>
-              {%- when 'share' -%}
+              {% comment %} {%- when 'share' -%}
                 {% liquid
                   assign share_url = product.selected_variant.url | default: product.url | prepend: request.origin
                   render 'share-button', block: block, share_link: share_url
-                %}
+                %} {% endcomment %}
 
               {%- when 'variant_picker' -%}
                 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
@@ -667,7 +677,7 @@
           {% render 'description-accordian', title: "Premium Extras", description:"Powder-coated design for weather resistance, antimicrobial protection, and rust prevention. ⁠Removable sleeves for easier storage and compact transport. Includes 2 Olympic spin-lock collars for securely fastening your plates. Comes with exclusive training guides specifically created for weighted vest workouts." -%}
 
 
-          
+
           <a href="{{ product.url }}" class="link product__view-details animate-arrow">
             {{ 'products.product.view_full_details' | t }}
             {{- 'icon-arrow.svg' | inline_asset_content -}}
@@ -727,13 +737,6 @@
     <script type="application/ld+json">
       {{ product | structured_data }}
     </script>
-{%- render 'buy-buttons',
-  block: section.blocks | where: "type", "buy_buttons" | first,
-  product: product,
-  product_form_id: product_form_id,
-  section_id: section.id,
-  show_pickup_availability: true
--%}
   </div>
 </product-info>
 

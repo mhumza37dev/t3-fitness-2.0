@@ -1896,7 +1896,6 @@ input[type='checkbox'] {
   left: var(--inputs-border-width);
   border: 0.1rem solid transparent;
   border-radius: var(--inputs-radius);
-  box-shadow: 0 0 0 var(--inputs-border-width) rgba(var(--color-foreground), var(--inputs-border-opacity));
   transition: box-shadow var(--duration-short) ease;
   z-index: 1;
 }
@@ -3625,6 +3624,65 @@ quantity-input.quantity {
 @media screen and (max-width: 768px) {
   quantity-input.quantity {
       width: 100%;
+  }
+}
+
+
+
+
+
+.row.size-row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 413px;
+  margin-bottom: 0.625rem;
+}
+.size-row-label{
+  font-family: "Syncopate", sans-serif;
+font-weight: 500;
+font-size: 12px;
+line-height: 150%;
+letter-spacing: 0%;
+}
+.size-row-value{
+  font-family: "Syncopate", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  
+}
+
+.row.rating-row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 413px;
+  margin-bottom: 0.625rem;
+}
+.rating-row-label{
+  font-family: "Syncopate", sans-serif;
+font-weight: 500;
+font-size: 10px;
+line-height: 150%;
+letter-spacing: 0%;
+}
+.rating-row-value{
+  font-family: "Syncopate", sans-serif;
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: 0%;  
+}
+
+@media screen and (max-width: 768px) {
+  .row.size-row{
+  max-width: 100%;
+  }
+  .row.rating-row{
+    max-width: 100%;
   }
 }
 
