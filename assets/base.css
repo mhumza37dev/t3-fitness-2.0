@@ -3658,7 +3658,8 @@ letter-spacing: 0%;
 .row.rating-row{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap:12px;
   align-items: center;
   max-width: 413px;
   margin-bottom: 0.625rem;
