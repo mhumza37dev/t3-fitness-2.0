@@ -3617,13 +3617,13 @@ quantity-input.quantity {
   border-radius: 40px;
   padding: 2px 4px;
   border: 0px transparent;
-  width: 168px;
+  width: 167px;
   height: 49px;
 }
 
 @media screen and (max-width: 768px) {
   quantity-input.quantity {
-      width: 100%;
+      /* width: 100%; */
   }
 }
 
@@ -3667,7 +3667,7 @@ letter-spacing: 0%;
 .rating-row-label{
   font-family: "Syncopate", sans-serif;
 font-weight: 500;
-font-size: 10px;
+font-size: 12px;
 line-height: 150%;
 letter-spacing: 0%;
 }
@@ -3675,7 +3675,8 @@ letter-spacing: 0%;
   font-family: "Syncopate", sans-serif;
   font-size: 12px;
   line-height: 150%;
-  letter-spacing: 0%;  
+  letter-spacing: 0%; 
+  font-weight: 500; 
 }
 
 @media screen and (max-width: 768px) {
@@ -3696,3 +3697,88 @@ letter-spacing: 0%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   padding: 1.75rem 0;
 }
+
+
+.quantity-row {
+  display: flex;
+  align-items: center;
+}
+
+.adjustable {
+  /* min-height: 55px; */
+  min-height: calc((var(--inputs-border-width) * 2) + 4.5rem);
+    display: flex !important;
+    align-items: center;
+    margin: 0 !important;
+    max-width: 167px;
+    font-size: 1.3rem !important;
+    text-align: center !important;
+    justify-content: center;
+    background: white !important;
+    margin-top: 6px;
+    color:rgba(0, 0, 0, 0.6) !important;
+    outline: none !important;
+    border: none !important;
+    font-family: Urbanist;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: 0%;
+}
+
+.size-label{
+  margin-bottom:8px; 
+  font-family: Urbanist; 
+  font-weight: 600; 
+  font-size: 14px; 
+  line-height: 150%; 
+  letter-spacing: 0%;
+}
+
+fieldset.js.product-form__input.product-form__input--pill {
+  margin: 0;
+}
+
+.desk-text{
+  font-family: Urbanist;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0%;
+  text-transform: capitalize;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+
+.title-view {
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+
+.price-per-item__container--custom{
+
+  display: flex; align-items: center; gap: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .desk-text{
+    display: none;
+  }
+  .title-view {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2px;
+  }
+
+
+  .price-per-item__container--custom{
+    justify-content: space-between;
+  }
+}
+
+
+

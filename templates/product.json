@@ -34,17 +34,16 @@
           "type": "price",
           "settings": {}
         },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
         "variant_picker": {
           "type": "variant_picker",
-          "disabled": true,
           "settings": {
             "picker_type": "button",
             "swatch_shape": "circle"
           }
-        },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {}
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -62,7 +61,7 @@
             "icon_2": "return",
             "heading_2": "90 Days Warranty",
             "icon_3": "truck",
-            "heading_3": "4 Days Easy Returns"
+            "heading_3": "14 Days Easy Returns"
           }
         },
         "description": {
@@ -81,8 +80,8 @@
         "klaviyo_reviews_average_rating_QB9L4w",
         "title",
         "price",
-        "variant_picker",
         "quantity_selector",
+        "variant_picker",
         "buy_buttons",
         "icon_with_text_CG9BVh",
         "description",

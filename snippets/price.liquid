@@ -52,7 +52,7 @@
 
   @media screen and (max-width: 768px) {
   .price-text{
-    font-size: 20px; 
+    font-size: 18px; 
   }
 }
 </style>
@@ -76,7 +76,12 @@
           - div.price__regular: Displayed when there are no variants on sale
           - div.price__sale: Displayed when a variant is a sale
       {%- endcomment -%}
-      <div class="price__regular">
+      
+      <h4 class="price-item price-item--regular price-text">
+        {{ money_price }}
+      </h4>
+      
+      {% comment %} <div class="price__regular">
         {%- if product.quantity_price_breaks_configured? -%}
           {%- if show_compare_at_price and compare_at_price -%}
             {%- unless product.price_varies == false and product.compare_at_price_varies %}
@@ -107,7 +112,8 @@
             {{ money_price }}
           </span>
         {%- endif -%}
-      </div>
+      </div> {% endcomment %}
+
       <div class="price__sale">
         {%- unless product.price_varies == false and product.compare_at_price_varies %}
           <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
