@@ -1,0 +1,116 @@
+{% comment %}
+  Usage:
+  {% render 'description-accordian',
+     title: 'DESCRIPTION',
+     description: 'Your description text here'
+   %}
+{% endcomment %}
+
+<style>
+.description-accordian {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 1.75rem 0;
+  margin-bottom: 1.5rem;
+}
+
+.accordion {
+  background: transparent;
+  color: rgb(18, 18, 18);
+  cursor: pointer;
+  padding: 0;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-family: 'Syncopate', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.accordion:hover {
+  opacity: 0.7;
+}
+
+.accordion-icon {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.accordion-icon:before,
+.accordion-icon:after {
+  content: '';
+  position: absolute;
+  background-color: rgb(18, 18, 18);
+  transition: transform 0.3s ease;
+}
+
+.accordion-icon:before {
+  width: 2px;
+  height: 16px;
+  top: 4px;
+  left: 11px;
+}
+
+.accordion-icon:after {
+  width: 16px;
+  height: 2px;
+  top: 11px;
+  left: 4px;
+}
+
+.accordion.active .accordion-icon:before {
+  transform: rotate(90deg);
+}
+
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  
+}
+
+.panel p {
+  margin: 1rem 0 0 0;
+  color: rgba(0, 0, 0, 1);
+  font-family: Urbanist;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0%;
+
+}
+</style>
+
+<div class="description-accordian">
+  <button id="accordion-{{ title | handleize }}" class="accordion">
+    {{ title }}
+    <span class="accordion-icon"></span>
+  </button>
+  <div class="panel">
+    <p>{{ description }}</p>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var accordion = document.getElementById('accordion-{{ title | handleize }}');
+  
+  accordion.addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+});
+</script>

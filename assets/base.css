@@ -3627,3 +3627,13 @@ quantity-input.quantity {
       width: 100%;
   }
 }
+
+.payment-card-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 1.75rem 0;
+}

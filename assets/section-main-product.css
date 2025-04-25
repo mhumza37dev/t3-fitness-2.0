@@ -358,7 +358,15 @@ a.product__text {
 }
 
 .product-form__buttons {
-  max-width: 44rem;
+  /* max-width: 44rem; */
+  display: flex;
+    gap: 1.438rem;
+}
+
+@media screen and (max-width: 768px) {
+  .product-form__buttons {
+      flex-direction: column;
+  }
 }
 
 .product--no-media .product__info-container > modal-opener {

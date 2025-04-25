@@ -656,6 +656,18 @@
                 {% render 'icon-with-text', block: block %}
             {%- endcase -%}
           {%- endfor -%}
+
+          {% render 'payment-card-list' -%}
+          {% render 'description-accordian', title: "Description", description:"The T3 WrX+ Plated Weight Vest is built for serious athletes and fitness enthusiasts. It combines high weight capacity, durable construction, versatile weight loading, and a focus on comfort. Compatible with standard Olympic weight plates, it offers more flexibility and long-term value than proprietary systems." -%}
+          {% render 'description-accordian', title: "High Weight Capacity", description:"The T3 WrX+ Plated Weight Vest offers an impressive weight capacity of up to 150kg. This makes it suitable for even the most intense and demanding workouts, providing room for progressive overload and strength-focused training." -%}
+          {% render 'description-accordian', title: "Versatile Weight Loading", description:"Designed with a unique sleeve system, this vest allows you to load it with standard Olympic weight plates. This eliminates the need for proprietary weights and gives you the freedom to adjust the load based on your workout needs." -%}
+          {% render 'description-accordian', title: "Durable Construction", description:"Made with military-grade Nylon and heavy-duty metal plates for long-lasting durability. Equipped with a heavy-duty quick-release snap for fast, easy on and off during your training sessions." -%}
+          {% render 'description-accordian', title: "Why Choose This Vest?", description:"Adjustable straps, breathable inner lining, and seamless stitching for a snug, irritation-free fit during every workout. Quick-release system lets you gear up or down in seconds — no hassle between sets. From powder-coated sleeves to spin-lock collars and exclusive training guides — it's packed with thoughtful bonuses you won’t find elsewhere." -%}
+          {% render 'description-accordian', title: "Comfort and Fit", description:"Adjustable shoulder and chest straps provide a secure, personalized fit. ⁠Removable and breathable inner lining adds comfort and improves hygiene. ⁠Seamless binding helps prevent discomfort and pressure on your neck and shoulders." -%}
+          {% render 'description-accordian', title: "Premium Extras", description:"Powder-coated design for weather resistance, antimicrobial protection, and rust prevention. ⁠Removable sleeves for easier storage and compact transport. Includes 2 Olympic spin-lock collars for securely fastening your plates. Comes with exclusive training guides specifically created for weighted vest workouts." -%}
+
+
+          
           <a href="{{ product.url }}" class="link product__view-details animate-arrow">
             {{ 'products.product.view_full_details' | t }}
             {{- 'icon-arrow.svg' | inline_asset_content -}}
@@ -715,7 +727,7 @@
     <script type="application/ld+json">
       {{ product | structured_data }}
     </script>
-{%- render 'sticky-buy-buttons',
+{%- render 'buy-buttons',
   block: section.blocks | where: "type", "buy_buttons" | first,
   product: product,
   product_form_id: product_form_id,

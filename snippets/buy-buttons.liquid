@@ -10,6 +10,25 @@
   Usage:
   {% render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, section_id: section.id, show_pickup_availability: true %}
 {% endcomment %}
+
+<style>
+  form.form button{
+    padding: 0;
+    font-family: Urbanist, 'sans-serif';
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  }
+  form.form button:after{
+    box-shadow: none;
+  }
+  .shopify-payment-button{
+  width: 100%;
+  }
+</style>
+
+
 <div {{ block.shopify_attributes }}>
   {%- if product != blank -%}
     {%- liquid
@@ -75,6 +94,7 @@
             type="submit"
             name="add"
             class="product-form__submit button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
+            style="background-color: transparent; border:1px solid rgba(0, 0, 0, 0.2); box-shadow: none;"
             {% if product.selected_or_first_available_variant.available == false
               or quantity_rule_soldout
               or product.selected_or_first_available_variant == null
