@@ -21,6 +21,7 @@
         },
         "klaviyo_reviews_average_rating_QB9L4w": {
           "type": "shopify://apps/klaviyo-reviews/blocks/average-rating/db20e365-d984-4ac4-9655-e1588d951ca9",
+          "disabled": true,
           "settings": {
             "product": "{{product}}"
           }
@@ -35,6 +36,7 @@
         },
         "variant_picker": {
           "type": "variant_picker",
+          "disabled": true,
           "settings": {
             "picker_type": "button",
             "swatch_shape": "circle"
@@ -75,7 +77,7 @@
       ],
       "settings": {
         "enable_sticky_info": true,
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-3e95d338-b312-491b-9c80-e1a8471ffe8f",
         "media_size": "small",
         "constrain_to_viewport": true,
         "media_fit": "cover",
